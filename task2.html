@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Звіт про виконані завдання: A-Frame сцена</title>
+    
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  </head>
+  <body>
+
+    <div style="position: absolute; top: 10px; left: 10px; z-index: 999; background: rgba(255,255,255,0.9); padding: 12px; border-radius: 6px; font-family: Arial, sans-serif; border: 1px solid #ccc;">
+      <h1 style="margin: 0 0 5px 0; font-size: 18px;">Домашня робота: п. 3.10</h1>
+      <h2 style="margin: 0; font-size: 14px; color: #555;">Студентка групи МІМ-25</h2>
+      <p style="margin: 5px 0 0 0; font-size: 12px; color: #2196F3; font-weight: bold;">Виконано: Лідія</p>
+    </div>
+
+    <a-scene>
+      
+      <a-assets>
+        <img id="floor-texture" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/illustration/checkerboard.png" crossorigin="anonymous">
+        
+        <a-asset-item id="duck-model" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/models/duck/Duck.gltf" crossorigin="anonymous"></a-asset-item>
+      </a-assets>
+
+      <a-entity 
+        text="value: Звiт виконала: Shevtsova Lidiya (group MIM-25); font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/roboto/Roboto-Medium.json; shader: msdf; color: #000000; align: center; width: 4.5;" 
+        position="0 2.2 -3">
+      </a-entity>
+
+      <a-entity gltf-model="#duck-model" 
+                position="0 1.15 -3" 
+                scale="0.6 0.6 0.6"
+                animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
+      </a-entity>
+
+      <a-torus position="-2 1.5 -4" color="#FFD700" radius="0.6" tube="0.15"
+               animation="property: rotation; to: 360 360 0; loop: true; dur: 6000"></a-torus>
+
+      <a-cylinder position="0 0.4 -3" radius="0.6" height="0.8" color="#00BFFF"></a-cylinder>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="15" height="15" src="#floor-texture" repeat="8 8"></a-plane>
+
+      <a-sky color="#7FFFD4"></a-sky>
+
+      <a-light type="ambient" color="#FFF" intensity="0.7"></a-light>
+      <a-light type="directional" position="2 4 3" color="#FFF" intensity="0.5"></a-light>
+
+      <a-entity position="0 1.6 0">
+        <a-camera></a-camera>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
