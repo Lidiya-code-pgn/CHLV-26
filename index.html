@@ -1,12 +1,33 @@
-<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Звіт про виконані завдання</title>
-</head>
-<body>
-    <h1>Звіт про виконані завдання</h1>
-    <h2>Студентки групи МІМ-25</h2>
-    <!-- Ваш вміст тут -->
-</body>
+    <title>Домашнє завдання: A-Frame сцена</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  </head>
+  <body>
+
+    <div style="position: absolute; top: 10px; left: 10px; z-index: 999; background: rgba(255,255,255,0.9); padding: 12px; border-radius: 6px; font-family: Arial, sans-serif; border: 1px solid #ccc;">
+      <h1 style="margin: 0 0 5px 0; font-size: 18px;">Звіт про виконані завдання</h1>
+      <h2 style="margin: 0; font-size: 14px; color: #555;">Студентки групи МІМ-25</h2>
+      <p style="margin: 5px 0 0 0; font-size: 12px; color: green; font-weight: bold;">3D-простір налаштовано успішно!</p>
+    </div>
+
+    <a-scene>
+      <a-sky color="#7FFFD4"></a-sky>
+
+      <a-light type="ambient" color="#BBB"></a-light>
+      <a-light type="directional" position="1 1 1" color="#FFF" intensity="0.6"></a-light>
+
+      <a-torus position="-2 1.5 -5" color="#FFD700" radius="0.8" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-torus>
+
+      <a-cylinder position="2 0.75 -5" radius="0.5" height="1.5" color="#00BFFF"></a-cylinder>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+
+      <a-entity position="0 1.6 0">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+
+  </body>
 </html>
